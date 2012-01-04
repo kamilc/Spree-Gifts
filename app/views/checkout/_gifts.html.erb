@@ -1,0 +1,6 @@
+<fieldset id="gift">
+  <p class="field" id="blastname">
+    Chcę zakupić produkty na prezent ( adres dostawy jest adresem obdarowywanego )<br />
+    <input type='checkbox' name='order[for_gift]' <%= "checked='checked'" if @order.for_gift? %> />
+  </p>
+</fieldset>
