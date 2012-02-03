@@ -1,0 +1,5 @@
+<% if @product.for_gift %>
+  <%= t('for_gift') %> <%= check_box_tag :for_gift, "1", false %>
+<% else %>
+  <%= t('for_gift') %> <%= check_box_tag :for_gift, "1", false, { :disabled => 'disabled' } %>
+<% end %>

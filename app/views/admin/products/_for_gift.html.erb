@@ -1,0 +1,5 @@
+<%= f.field_container :for_gift do %>
+  <%= f.label :for_gift, t(:for_gift) %> <span class="required">*</span><br />
+  <%= f.check_box :for_gift %>
+  <%= f.error_message_on :for_gift %>
+<% end %>

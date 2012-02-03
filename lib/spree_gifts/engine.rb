@@ -22,16 +22,6 @@ module SpreeGift
         Spree::Config.set(:for_gift_amount => 10)
       end
 
-      Deface::Override.new(:virtual_path  => "checkout/_address",
-            :insert_before => "#billing",
-            :partial       => "checkout/gifts",
-            :name          => "gift_option")
-
-      Deface::Override.new(:virtual_path  => "admin/general_settings/edit",
-                           :insert_bottom => "#preferences",
-                           :partial       => "admin/general_settings/gifts",
-                           :name          => "gift_admin")
-
     end
 
     config.to_prepare &method(:activate).to_proc

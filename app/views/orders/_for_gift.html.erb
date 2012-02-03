@@ -1,0 +1,7 @@
+<td data-hook="cart_item_for_gift">
+  <% if line_item.product.for_gift %>
+	<%= item_form.check_box :for_gift %>
+  <% else %>
+    <%= item_form.check_box :for_gift, { :disabled => 'disabled' } %>
+  <% end %>
+</td>
