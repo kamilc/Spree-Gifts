@@ -18,8 +18,12 @@ module SpreeGift
         Rails.application.config.cache_classes ? require(c) : load(c)
       end
 
-      if Spree::Config[:for_gift_amount].nil?
-        Spree::Config.set(:for_gift_amount => 10)
+      if Spree::Config.instance
+
+        if Spree::Config[:for_gift_amount].nil?
+          Spree::Config.set(:for_gift_amount => 10)
+        end
+
       end
 
     end
